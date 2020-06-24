@@ -5,8 +5,6 @@ set_attack_value(AT_DATTACK, AG_OFF_LEDGE, 1);
 
 set_window_value(AT_DATTACK, 1, AG_WINDOW_LENGTH, 8);
 set_window_value(AT_DATTACK, 1, AG_WINDOW_ANIM_FRAMES, 3);
-set_window_value(AT_DATTACK, 2, AG_WINDOW_HSPEED_TYPE, 1);
-set_window_value(AT_DATTACK, 2, AG_WINDOW_HSPEED, 0);
 
 set_window_value(AT_DATTACK, 2, AG_WINDOW_LENGTH, 12);
 set_window_value(AT_DATTACK, 2, AG_WINDOW_ANIM_FRAMES, 4);
@@ -14,6 +12,7 @@ set_window_value(AT_DATTACK, 2, AG_WINDOW_ANIM_FRAME_START, 3);
 set_window_value(AT_DATTACK, 2, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DATTACK, 2, AG_WINDOW_SFX, asset_get("sfx_land_med"));
 set_window_value(AT_DATTACK, 2, AG_WINDOW_SFX_FRAME, get_window_value(AT_DATTACK, 2, AG_WINDOW_LENGTH) - 1);
+set_window_value(AT_DATTACK, 2, AG_WINDOW_HSPEED_TYPE, 2);
 set_window_value(AT_DATTACK, 2, AG_WINDOW_HSPEED, leave_ground_max);
 
 set_window_value(AT_DATTACK, 3, AG_WINDOW_LENGTH, 30);
