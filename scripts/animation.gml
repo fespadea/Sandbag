@@ -15,4 +15,9 @@ switch (state){
                 }
             }
         }
+        if(attack == AT_DSTRONG){
+            if(window == 2 || window == 3){
+                hud_offset = 60;
+            }
+        }
 }
