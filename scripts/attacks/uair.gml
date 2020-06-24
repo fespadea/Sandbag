@@ -8,7 +8,7 @@ set_attack_value(AT_UAIR, AG_NUM_WINDOWS, 3);
 set_window_value(AT_UAIR, 1, AG_WINDOW_LENGTH, 7);
 set_window_value(AT_UAIR, 1, AG_WINDOW_ANIM_FRAMES, 3);
 set_window_value(AT_UAIR, 1, AG_WINDOW_HAS_SFX, 1);
-set_window_value(AT_UAIR, 1, AG_WINDOW_SFX, asset_get("sfx_gus_jump"));
+set_window_value(AT_UAIR, 1, AG_WINDOW_SFX, asset_get("sfx_swipe_medium1"));
 set_window_value(AT_UAIR, 1, AG_WINDOW_SFX_FRAME, get_window_value(AT_UAIR, 1, AG_WINDOW_LENGTH) - 2);
 
 set_window_value(AT_UAIR, 2, AG_WINDOW_LENGTH, 6);
