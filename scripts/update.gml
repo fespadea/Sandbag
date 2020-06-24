@@ -13,7 +13,7 @@ switch(state){
     case PS_WALK:
         if(continueDash){
             set_state(PS_DASH_START);
-        } else if(image_index == sprite_get_number(walkSprite)-3){
+        } else if(image_index == sprite_get_number(walkSprite)-1){
             set_state(PS_DASH_STOP);
         }
         break;
