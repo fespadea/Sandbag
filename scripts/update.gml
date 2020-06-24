@@ -28,5 +28,3 @@ if(!free || state_cat == SC_HITSTUN){
 } else if(sanddashed){
     move_cooldown[AT_NSPECIAL_AIR] = 2;
 }
-
-print_debug(get_state_name( state ))

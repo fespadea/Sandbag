@@ -57,6 +57,7 @@ set_hitbox_value(AT_USTRONG, 1, HG_BASE_KNOCKBACK, 4);
 set_hitbox_value(AT_USTRONG, 1, HG_BASE_HITPAUSE, 4);
 set_hitbox_value(AT_USTRONG, 1, HG_HIT_SFX, asset_get("sfx_blow_heavy1"));
 set_hitbox_value(AT_USTRONG, 1, HG_HITBOX_GROUP, 1);
+set_hitbox_value(AT_USTRONG, 1, HG_TECHABLE, 1);
 
 set_hitbox_value(AT_USTRONG, 2, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_USTRONG, 2, HG_WINDOW, 5);

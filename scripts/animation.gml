@@ -21,6 +21,11 @@ switch (state){
                     hud_offset = 60;
                 }
                 break;
+            case AT_USTRONG:
+                if(window > 1 && window < 6){
+                    hud_offset = 55;
+                }
+                break;
             case AT_NSPECIAL_AIR:
                 if(window == 3){
                     if(hsp == 0){
