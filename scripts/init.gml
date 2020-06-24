@@ -70,7 +70,7 @@ tech_recovery_frames = 3;
 techroll_startup_frames = 2;
 techroll_active_frames = 7;
 techroll_recovery_frames = 3;
-techroll_speed = 10;
+techroll_speed = 8;
 
 //airdodge animation frames
 air_dodge_startup_frames = 1;
@@ -107,3 +107,13 @@ jumpSprite = sprite_get("jump");
 
 // dash variable
 continueDash = false;
+
+// Sanddash variables
+sanddashed = false;
+sanddropped = false;
+preSanddropVsp = 0;
+// sanddash sprites
+sanddashForwardSprite = sprite_get("nspecial_forward");
+sanddashBackwardSprite = sprite_get("nspecial_backward");
+sanddashUpSprite = sprite_get("nspecial_up");
+sanddashLandingLagSprite = sprite_get("fspecial_land");

@@ -1,6 +1,6 @@
 //update
 
-switch(state){
+switch(state){ // dash stuff
     case PS_DASH:
         if(image_index == sprite_get_number(dashSprite)-1){
             set_state(PS_DASH_STOP);
@@ -20,4 +20,11 @@ switch(state){
     default:
         continueDash = false;
         break;
+}
+
+// reset used sanddash variable
+if(!free || state_cat == SC_HITSTUN){
+    sanddashed = false;
+} else if(sanddashed){
+    move_cooldown[AT_NSPECIAL_AIR] = 2;
 }
