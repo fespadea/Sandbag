@@ -33,6 +33,12 @@ switch (state){
                 } else if(window == 4){
                     sprite_index = sanddashLandingLagSprite;
                 }
+                break;
+            case AT_NSPECIAL:
+                if(window == 3){
+                    sprite_index = sanddashUpSprite;
+                }
+                break;
         }
         break;
 }

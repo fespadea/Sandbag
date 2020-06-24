@@ -23,19 +23,19 @@ switch(attack){
                 window = 3;
                 window_timer = 0;
                 var sandDashSpeed = 8;
-                if(left_down){
-                    hsp = -sandDashSpeed;
-                } else if(right_down){
-                    hsp = sandDashSpeed;
-                }
+                var sandDashAngle = 30;
                 if(up_down){
+                    hsp = 0;
                     vsp = -sandDashSpeed;
-                } else if(down_down){
-                    vsp = sandDashSpeed;
-                }
-                if(hsp != 0 && vsp != 0){
-                    hsp *= dcos(45);
-                    vsp *= dcos(45);
+                } else if(right_down){
+                    hsp = sandDashSpeed*dcos(sandDashAngle);
+                    vsp = sandDashSpeed*dsin(sandDashAngle);
+                } else if(left_down){
+                    hsp = -sandDashSpeed*dcos(sandDashAngle);
+                    vsp = sandDashSpeed*dsin(sandDashAngle);
+                } else {
+                    hsp = spr_dir*sandDashSpeed*dcos(sandDashAngle);
+                    vsp = sandDashSpeed*dsin(sandDashAngle);
                 }
             }
         } else if(window == 2){
@@ -70,6 +70,37 @@ switch(attack){
             }
             if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
                 set_state(PS_IDLE_AIR);
+            }
+        }
+        break;
+    case AT_NSPECIAL:
+        can_move = false;
+        if(window == 1){
+            if(!joy_pad_idle){
+                var sandDashSpeed = 8;
+                clear_button_buffer(PC_SPECIAL_PRESSED);
+                if(up_down){
+                    window = 3;
+                    window_timer = 0;
+                    hsp = 0;
+                    vsp = -sandDashSpeed;
+                } else if(right_down){
+                    spr_dir = 1;
+                    set_state(PS_DASH);
+                } else if(left_down){
+                    spr_dir = -1;
+                    set_state(PS_DASH);
+                }
+            }
+        } else if(window == 2){
+            can_attack = true;
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                set_state(PS_IDLE);
+            }
+        } else if(window == 3){
+            can_attack = true;
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                set_state(PS_IDLE);
             }
         }
         break;
