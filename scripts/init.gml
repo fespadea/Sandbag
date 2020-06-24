@@ -14,11 +14,11 @@ walk_speed = 3.25;
 walk_accel = 0.2;
 walk_turn_time = 6;
 initial_dash_time = 6;
-initial_dash_speed = 10;
+initial_dash_speed = 8;
 dash_speed = initial_dash_speed;
 dash_turn_time = 6;
 dash_turn_accel = 1.5;
-dash_stop_time = 9;
+dash_stop_time = 20;
 dash_stop_percent = .35; //the value to multiply your hsp by when going into idle from dash or dashstop
 ground_friction = .5;
 moonwalk_accel = 1.4;
@@ -95,20 +95,15 @@ waveland_sound = asset_get("sfx_waveland_zet");
 jump_sound = asset_get("sfx_jumpground");
 djump_sound = asset_get("sfx_jumpair");
 air_dodge_sound = asset_get("sfx_quick_dodge");
-dashstart_sound = asset_get("sfx_dash_start");
 
 //visual offsets for when you're in Ranno's bubble
 bubble_x = 0;
 bubble_y = 8;
 
 //sprites
-idleSprite = sprite_get("idle");
-dashstartSprite = sprite_get("dashstart");
+walkSprite = sprite_get("walk");
 dashSprite = sprite_get("dash");
-dashstopSprite = sprite_get("dashstop");
-dashturnSprite = sprite_get("dashturn");
 jumpSprite = sprite_get("jump");
 
-//hfx
-dashstart_bg_hfx = hit_fx_create(asset_get("fx_dashstart_bg"), 20);
-dashstart_fg_hfx = hit_fx_create(asset_get("fx_dashstart_fg"), 20);
+// dash variables
+continueDash = false;
