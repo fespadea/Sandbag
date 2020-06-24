@@ -9,7 +9,7 @@ set_window_value(AT_DAIR, 1, AG_WINDOW_LENGTH, 16);
 set_window_value(AT_DAIR, 1, AG_WINDOW_ANIM_FRAMES, 8);
 set_window_value(AT_DAIR, 1, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DAIR, 1, AG_WINDOW_SFX, asset_get("sfx_swipe_heavy1"));
-set_window_value(AT_DAIR, 1, AG_WINDOW_SFX_FRAME, get_window_value(AT_DAIR, 1, AG_WINDOW_LENGTH) - 2);
+set_window_value(AT_DAIR, 1, AG_WINDOW_SFX_FRAME, get_window_value(AT_DAIR, 1, AG_WINDOW_LENGTH) - 1);
 
 set_window_value(AT_DAIR, 2, AG_WINDOW_LENGTH, 3);
 set_window_value(AT_DAIR, 2, AG_WINDOW_ANIM_FRAMES, 1);
