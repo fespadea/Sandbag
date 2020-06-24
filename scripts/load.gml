@@ -1,6 +1,5 @@
 sprite_change_offset("idle", 50, 82);
 sprite_change_offset("hurtbox", 50, 82);
-sprite_change_offset("hurt", 55, 82);
 sprite_change_offset("crouch", 50, 82);
 sprite_change_offset("hurtbox_crouch", 50, 82);
 sprite_change_offset("walk", 48, 82);
@@ -25,10 +24,18 @@ sprite_change_offset("airdodge", 48, 82);
 sprite_change_offset("waveland", 48, 82);
 sprite_change_offset("tech", 48, 82);
 
+sprite_change_offset("hurt", 55, 82);
+sprite_change_offset("bighurt", 55, 82);
+sprite_change_offset("bouncehurt", 55, 82);
+sprite_change_offset("downhurt", 55, 82);
+sprite_change_offset("uphurt", 55, 82);
+sprite_change_offset("hurtground", 55, 82);
+sprite_change_offset("spinhurt", 55, 82);
+
 sprite_change_offset("jab", 0, 0);
 sprite_change_offset("dattack", 0, 0);
 sprite_change_offset("ftilt", 0, 0);
-sprite_change_offset("dtilt", 0, 0);
+sprite_change_offset("dtilt", 50, 82);
 sprite_change_offset("utilt", 0, 0);
 sprite_change_offset("nair", 0, 0);
 sprite_change_offset("fair", 0, 0);
