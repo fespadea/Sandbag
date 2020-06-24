@@ -48,6 +48,7 @@ sprite_change_offset("dstrong", 100, 132);
 sprite_change_offset("nspecial_neutral", 100, 132);
 sprite_change_offset("nspecial_forward", 100, 132);
 sprite_change_offset("nspecial_backward", 100, 132);
+sprite_change_offset("nspecial_land", 100, 132);
 sprite_change_offset("nspecial_up", 100, 132);
 sprite_change_offset("fspecial", 0, 0);
 sprite_change_offset("fspecial_land", 50, 82);

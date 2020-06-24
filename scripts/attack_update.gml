@@ -66,7 +66,8 @@ switch(attack){
             if(!free){
                 window = 4;
                 window_timer = 0;
-                sound_play(asset_get("sfx_land_heavy"));
+                spr_dir = sign(hsp);
+                sound_play(sanddashLandSound);
             }
             if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
                 set_state(PS_IDLE_AIR);

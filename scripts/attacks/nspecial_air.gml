@@ -19,5 +19,5 @@ set_window_value(AT_NSPECIAL_AIR, 2, AG_WINDOW_CUSTOM_GRAVITY, gravity_speed/3);
 set_window_value(AT_NSPECIAL_AIR, 3, AG_WINDOW_LENGTH, 24);
 set_window_value(AT_NSPECIAL_AIR, 3, AG_WINDOW_ANIM_FRAMES, 12);
 
-set_window_value(AT_NSPECIAL_AIR, 4, AG_WINDOW_LENGTH, 16);
-set_window_value(AT_NSPECIAL_AIR, 4, AG_WINDOW_ANIM_FRAMES, 4);
+set_window_value(AT_NSPECIAL_AIR, 4, AG_WINDOW_LENGTH, 40);
+set_window_value(AT_NSPECIAL_AIR, 4, AG_WINDOW_ANIM_FRAMES, sprite_get_number(sanddashLandingLagSprite[0]));

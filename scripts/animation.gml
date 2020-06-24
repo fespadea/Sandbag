@@ -29,19 +29,24 @@ switch (state){
             case AT_NSPECIAL_AIR:
                 if(window == 3){
                     if(hsp == 0){
-                        sprite_index = sanddashUpSprite;
+                        sprite_index = sanddashUpSprite[0];
+                        hurtboxID.sprite_index = sanddashUpSprite[1];
                     } else if(hsp > 0){
-                        sprite_index = sanddashForwardSprite;
+                        sprite_index = sanddashForwardSprite[0];
+                        hurtboxID.sprite_index = sanddashForwardSprite[1];
                     } else { // hsp < 0
-                        sprite_index = sanddashBackwardSprite;
+                        sprite_index = sanddashBackwardSprite[0];
+                        hurtboxID.sprite_index = sanddashBackwardSprite[1];
                     }
                 } else if(window == 4){
-                    sprite_index = sanddashLandingLagSprite;
+                    sprite_index = sanddashLandingLagSprite[0];
+                    hurtboxID.sprite_index = sanddashLandingLagSprite[1];
                 }
                 break;
             case AT_NSPECIAL:
                 if(window == 3){
-                    sprite_index = sanddashUpSprite;
+                    sprite_index = sanddashUpSprite[0];
+                    hurtboxID.sprite_index = sanddashUpSprite[1];
                 }
                 break;
         }
