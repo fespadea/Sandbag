@@ -105,5 +105,5 @@ walkSprite = sprite_get("walk");
 dashSprite = sprite_get("dash");
 jumpSprite = sprite_get("jump");
 
-// dash variables
+// dash variable
 continueDash = false;

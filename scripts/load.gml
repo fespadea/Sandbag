@@ -34,7 +34,7 @@ sprite_change_offset("spinhurt", 55, 82);
 
 sprite_change_offset("jab", 0, 0);
 sprite_change_offset("dattack", 0, 0);
-sprite_change_offset("ftilt", 0, 0);
+sprite_change_offset("ftilt", 100, 82);
 sprite_change_offset("dtilt", 50, 82);
 sprite_change_offset("utilt", 0, 0);
 sprite_change_offset("nair", 0, 0);
