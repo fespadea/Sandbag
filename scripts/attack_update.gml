@@ -198,7 +198,7 @@ switch(attack){
         }
         break;
     case AT_DSPECIAL:
-        hsp /= 1.5;
+        can_move = false;
         can_fast_fall = false;
         if(state_timer % 16 == 0){
             instance_create(round(x), round(y), "obj_article1");
