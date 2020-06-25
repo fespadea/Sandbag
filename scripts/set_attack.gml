@@ -8,4 +8,8 @@ switch(attack){
             sanddashed = true;
         }
         break;
+    case AT_FSPECIAL:
+        sandgrabGrabbed = false;
+        reset_hitbox_value(AT_FSPECIAL, 2, HG_ANGLE);
+        break;
 }

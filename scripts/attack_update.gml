@@ -40,6 +40,7 @@ switch(attack){
             }
         } else if(window == 2){
             can_attack = true;
+            can_wall_jump = true;
             if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
                 set_state(PS_IDLE_AIR);
             } else if(!sanddropped && down_hard_pressed){
@@ -51,7 +52,7 @@ switch(attack){
                     vsp = preSanddropVsp;
                     preSanddropVsp = 0;
                 }
-                if(!free && ground_type == 2){
+                if(!free){
                     if(right_hard_pressed){
                         spr_dir = 1;
                         set_state(PS_DASH);
@@ -95,6 +96,7 @@ switch(attack){
             }
         } else if(window == 2){
             can_attack = true;
+            can_wall_jump = true;
             if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
                 set_state(PS_IDLE);
             }
@@ -105,4 +107,84 @@ switch(attack){
             }
         }
         break;
+    case AT_FSPECIAL:
+        can_move = false;
+        if(window == 1){
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                sandgrabInitialHeight = y;
+                vsp = -5;
+                hsp = 8*spr_dir;
+            }
+        } else if(window == 2){
+            can_wall_jump = true;
+            if(window_timer == 1){
+                with pHitBox {
+                    if(orig_player == other.player && attack == AT_FSPECIAL && hbox_num == 1){
+                        other.sandgrabGrabHitbox = id;
+                    }
+                }
+            }
+            if(!free){
+                window = 4;
+                window_timer = 0;
+                sandgrabGrabHitbox.length = 0;
+            } else if(y > sandgrabInitialHeight){
+                window = 3;
+                window_timer = 0;
+                sandgrabGrabHitbox.length = 0;
+            } else if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                window_timer--;
+                sandgrabGrabHitbox.length++;
+            }
+        } else if(window == 3){
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                if(free){
+                    if(was_parried){
+                        set_state(PS_PRATFALL);
+                    } else {
+                        set_state(PS_IDLE_AIR);
+                    }
+                } else {
+                    if(was_parried){
+                        set_state(PS_PRATLAND);
+                    } else {
+                        set_state(PS_IDLE);
+                    }
+                }
+            }
+        } else if(window == 4){
+            if(instance_exists(grabbedidFspecial)){
+                if(window_timer == 1){
+                    x = grabbedidFspecial.x;
+                    y = grabbedidFspecial.y - grabbedidFspecial.char_height/2;
+                    hsp = 0;
+                    vsp = 0;
+                }
+                grabbedidFspecial.ungrab = 0;
+                grabbedidFspecial.x = x + hsp;
+                grabbedidFspecial.y = y + vsp + grabbedidFspecial.char_height/2;
+                grabbedidFspecial.wrap_time = 6000;
+                grabbedidFspecial.state = PS_WRAPPED;
+            }
+        } else if(window == 5){
+            if(instance_exists(grabbedidFspecial)){
+                grabbedidFspecial.ungrab = 0;
+                switch(image_index){
+                    case 2:
+                        grabbedidFspecial.x = x + hsp + lerp(0, -26*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        grabbedidFspecial.y = y + vsp + grabbedidFspecial.char_height/2 + lerp(0, -14, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        break;
+                    case 3:
+                        grabbedidFspecial.x = x + hsp + lerp(-26*spr_dir, -31*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        grabbedidFspecial.y = y + vsp + grabbedidFspecial.char_height/2 + lerp(-14, -33, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)*2/3));
+                        break;
+                    case 4:
+                        grabbedidFspecial.x = x + hsp + lerp(-31*spr_dir, -19*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        grabbedidFspecial.y = y + vsp + grabbedidFspecial.char_height/2 + lerp(-33, -61, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)));
+                        break;
+                }
+                grabbedidFspecial.wrap_time = 6000;
+                grabbedidFspecial.state = PS_WRAPPED;
+            }
+        }
 }

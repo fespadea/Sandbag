@@ -49,6 +49,32 @@ switch (state){
                     hurtboxID.sprite_index = sanddashUpSprite[1];
                 }
                 break;
+            case AT_FSPECIAL:
+                if(window == 2){
+                    if(window_timer > 1){
+                        if(vsp < -2){
+                            image_index = 4;
+                            sandgrabGrabHitbox.x_pos = 11*spr_dir;
+                            sandgrabGrabHitbox.y_pos = -44;
+                        } else if(vsp < -.3){
+                            image_index = 5;
+                            sandgrabGrabHitbox.x_pos = 19*spr_dir;
+                            sandgrabGrabHitbox.y_pos = -33;
+                        } else if(vsp < 2){
+                            image_index = 6;
+                            sandgrabGrabHitbox.x_pos = 19*spr_dir;
+                            sandgrabGrabHitbox.y_pos = -27;
+                        } else { // vsp > 2
+                            image_index = 7;
+                            sandgrabGrabHitbox.x_pos = 14*spr_dir;
+                            sandgrabGrabHitbox.y_pos = -21;
+                        }
+                    }
+                } else if(window > 3){
+                    sprite_index = sandgrabGrabSprite[0];
+                    hurtboxID.sprite_index = sandgrabGrabSprite[1];
+                }
+                break;
         }
         break;
 }

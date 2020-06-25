@@ -23,8 +23,23 @@ switch(state){ // dash stuff
 }
 
 // reset used sanddash variable
-if(!free || state_cat == SC_HITSTUN){
+if(!free || state_cat == SC_HITSTUN || state == PS_WALL_JUMP){
     sanddashed = false;
 } else if(sanddashed){
     move_cooldown[AT_NSPECIAL_AIR] = 2;
+}
+
+//update.gml
+if(grabbedidFspecial != noone){
+    if(instance_exists(grabbedidFspecial)){
+        grabbedidFspecial.ungrab++;
+        if(grabbedidFspecial.ungrab == 2){
+            if(grabbedidFspecial.state == PS_WRAPPED)
+                grabbedidFspecial.state = PS_TUMBLE;
+            grabbedidFspecial.ungrab = 0;
+            grabbedidFspecial = noone;
+        }
+    } else {
+        grabbedidFspecial = noone;
+    }
 }

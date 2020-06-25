@@ -123,3 +123,13 @@ sanddashUpSprite[0] = sprite_get("nspecial_up");
 sanddashUpSprite[1] = sprite_get("nspecial_up_hurt");
 sanddashLandingLagSprite[0] = sprite_get("nspecial_land");
 sanddashLandingLagSprite[1] = sprite_get("nspecial_land_hurt");
+
+// sandgrab variables
+sandgrabInitialHeight = 0;
+sandgrabGrabbed = false;
+sandgrabGrabHitbox = noone;
+//grab template
+grabbedidFspecial = noone;
+// sandgrab sprite
+sandgrabGrabSprite[0] = sprite_get("fspecial_grab");
+sandgrabGrabSprite[1] = sprite_get("fspecial_grab_hurt");
