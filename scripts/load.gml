@@ -52,7 +52,8 @@ sprite_change_offset("nspecial_land", 100, 132);
 sprite_change_offset("nspecial_up", 100, 132);
 sprite_change_offset("fspecial_fly", 50, 82);
 sprite_change_offset("fspecial_grab", 50, 82);
-sprite_change_offset("uspecial", 0, 0);
+sprite_change_offset("uspecial", 100, 132);
+sprite_change_offset("uspecial_proj", 100, 132);
 sprite_change_offset("dspecial", 0, 0);
 sprite_change_offset("taunt", 0, 0);
 

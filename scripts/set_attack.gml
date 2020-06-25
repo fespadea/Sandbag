@@ -12,4 +12,7 @@ switch(attack){
         sandgrabGrabbed = false;
         reset_hitbox_value(AT_FSPECIAL, 2, HG_ANGLE);
         break;
+    case AT_DATTACK:
+        clear_button_buffer(PC_ATTACK_PRESSED);
+        break;
 }
