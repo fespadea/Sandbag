@@ -197,4 +197,20 @@ switch(attack){
             sound_play(get_hitbox_value(attack, 1, HG_HIT_SFX));
         }
         break;
+    case AT_DSPECIAL:
+        hsp /= 1.5;
+        can_fast_fall = false;
+        if(state_timer % 16 == 0){
+            instance_create(round(x), round(y), "obj_article1");
+        }
+        if(window > 1){
+            if(!special_down && !is_special_pressed(4)){ // DIR_DOWN
+                if(free){
+                    set_state(PS_IDLE_AIR);
+                } else {
+                    set_state(PS_IDLE);
+                }
+            }
+        }
+        break;
 }

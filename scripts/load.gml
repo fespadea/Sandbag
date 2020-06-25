@@ -56,7 +56,7 @@ sprite_change_offset("fspecial_grab", 50, 82);
 sprite_change_offset("uspecial", 100, 132);
 sprite_change_offset("uspecial_proj", 100, 132);
 sprite_change_collision_mask("uspecial_proj", true, 0, 0, 0, 0, 0, 0);
-sprite_change_offset("dspecial", 0, 0);
+sprite_change_offset("dspecial", 100, 132);
 sprite_change_offset("taunt", 0, 0);
 
 sprite_change_offset("plat", 0, 0);
