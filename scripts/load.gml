@@ -31,6 +31,7 @@ sprite_change_offset("downhurt", 55, 82);
 sprite_change_offset("uphurt", 55, 82);
 sprite_change_offset("hurtground", 55, 82);
 sprite_change_offset("spinhurt", 55, 82);
+sprite_change_offset("hurtbox_hitstun", 55, 82);
 
 sprite_change_offset("jab", 0, 0);
 sprite_change_offset("dattack", 50, 82);
@@ -54,6 +55,7 @@ sprite_change_offset("fspecial_fly", 50, 82);
 sprite_change_offset("fspecial_grab", 50, 82);
 sprite_change_offset("uspecial", 100, 132);
 sprite_change_offset("uspecial_proj", 100, 132);
+sprite_change_collision_mask("uspecial_proj", true, 0, 0, 0, 0, 0, 0);
 sprite_change_offset("dspecial", 0, 0);
 sprite_change_offset("taunt", 0, 0);
 
