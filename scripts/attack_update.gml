@@ -198,7 +198,7 @@ switch(attack){
         if(window > 1){
             var bombDoesNotExist = true;
             with pHitBox {
-                if(orig_player == other.player && attack == other.attack && hbox_num == 1){
+                if(player == other.player && attack == other.attack && hbox_num == 1){
                     bombDoesNotExist = false;
                 }
             }

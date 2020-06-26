@@ -5,8 +5,10 @@ if(attack == AT_USPECIAL){
         proj_angle += 20*spr_dir;
         hsp = player_id.hsp;
         through_platforms = 2;
-        if(player_id.window > 2){
+        if(player_id.window > 2 && !was_parried && !getting_bashed){
             can_hit_self = true;
+        } else if(was_parried || orig_player != player || getting_bashed){
+            can_hit_self = false;
         }
         if(!free && vsp > 0){
             create_hitbox(attack, 3, round(x), round(y)).can_hit_self = true;
