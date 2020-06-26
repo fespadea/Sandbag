@@ -47,7 +47,8 @@ switch(attack){
                 sanddropped = true;
                 preSanddropVsp = vsp + get_window_value(attack, window, AG_WINDOW_CUSTOM_GRAVITY);
                 vsp = 30;
-            } else if(sanddropped){
+            }
+            if(sanddropped){
                 if(preSanddropVsp != 0){
                     vsp = preSanddropVsp;
                     preSanddropVsp = 0;
@@ -192,24 +193,26 @@ switch(attack){
     case AT_USPECIAL:
         hsp /= 1.5;
         can_fast_fall = false;
-        var bombDoesNotExist = true;
-        with pHurtBox {
-            if(orig_player == other.player){
-                bombDoesNotExist = true;
-            }
-        }
-        if(bombDoesNotExist){
-            if(free){
-                if(was_parried){
-                    set_state(PS_PRATFALL);
-                } else {
-                    set_state(PS_IDLE_AIR);
+        if(window > 1){
+            var bombDoesNotExist = true;
+            with pHitBox {
+                if(orig_player == other.player && attack == other.attack && hbox_num == 1){
+                    bombDoesNotExist = false;
                 }
-            } else {
-                if(was_parried){
-                    set_state(PS_PRATLAND);
+            }
+            if(bombDoesNotExist){
+                if(free){
+                    if(was_parried){
+                        set_state(PS_PRATFALL);
+                    } else {
+                        set_state(PS_IDLE_AIR);
+                    }
                 } else {
-                    set_state(PS_IDLE);
+                    if(was_parried){
+                        set_state(PS_PRATLAND);
+                    } else {
+                        set_state(PS_IDLE);
+                    }
                 }
             }
         }
