@@ -133,3 +133,14 @@ grabbedidFspecial = noone;
 // sandgrab sprite
 sandgrabGrabSprite[0] = sprite_get("fspecial_grab");
 sandgrabGrabSprite[1] = sprite_get("fspecial_grab_hurt");
+
+// break the targets variables
+targetArticle = noone;
+dspecialChargeWindow = 1;
+initialDspecialChargeWindow = 1;
+// sprites
+targetSprite[0] = sprite_get("dspecial_target_lv1");
+targetSprite[1] = sprite_get("dspecial_target_lv2");
+targetSprite[2] = sprite_get("dspecial_target_lv3");
+targetSprite[3] = sprite_get("dspecial_target_lv4");
+targetSprite[4] = sprite_get("dspecial_target_lv5");

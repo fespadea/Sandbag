@@ -15,4 +15,8 @@ switch(attack){
     case AT_DATTACK:
         clear_button_buffer(PC_ATTACK_PRESSED);
         break;
+    case AT_DSPECIAL:
+        window = dspecialChargeWindow;
+        initialDspecialChargeWindow = window;
+        break;
 }

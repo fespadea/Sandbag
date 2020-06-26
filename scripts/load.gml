@@ -60,3 +60,10 @@ sprite_change_offset("dspecial", 100, 132);
 sprite_change_offset("taunt", 0, 0);
 
 sprite_change_offset("plat", 0, 0);
+
+// proj
+sprite_change_offset("dspecial_target_lv1", 27, 27);
+sprite_change_offset("dspecial_target_lv2", 27, 27);
+sprite_change_offset("dspecial_target_lv3", 27, 27);
+sprite_change_offset("dspecial_target_lv4", 27, 27);
+sprite_change_offset("dspecial_target_lv5", 27, 27);

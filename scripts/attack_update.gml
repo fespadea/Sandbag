@@ -200,11 +200,16 @@ switch(attack){
     case AT_DSPECIAL:
         can_move = false;
         can_fast_fall = false;
-        if(state_timer % 16 == 0){
+        can_shield = true;
+        if(state_timer % 16 == 1){
             instance_create(round(x), round(y), "obj_article1");
         }
-        if(window > 1){
-            if(!special_down && !is_special_pressed(4)){ // DIR_DOWN
+        dspecialChargeWindow = window;
+        if(window_timer > 8 || window > initialDspecialChargeWindow){
+            if(special_pressed && is_special_pressed(DIR_ANY)){ // press special again to drop target
+                targetArticle = instance_create(round(x), round(y - char_height/2 - 5), "obj_article2");
+                dspecialChargeWindow = 1;
+                clear_button_buffer(PC_SPECIAL_PRESSED);
                 if(free){
                     set_state(PS_IDLE_AIR);
                 } else {
