@@ -238,4 +238,7 @@ switch(attack){
             }
         }
         break;
+    case AT_TAUNT:
+        tauntAngle -= ((get_window_value(attack, window, AG_WINDOW_LENGTH) - window_timer) / 4.95) * spr_dir;
+        break;
 }

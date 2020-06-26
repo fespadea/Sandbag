@@ -23,7 +23,7 @@ switch(state){ // dash stuff
 }
 
 // reset used sanddash variable
-if(!free){
+if(!free || state == PS_WALL_JUMP){
     sanddashed = false;
 } else if(sanddashed){
     move_cooldown[AT_NSPECIAL_AIR] = 2;

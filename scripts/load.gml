@@ -55,7 +55,7 @@ sprite_change_offset("fspecial_fly", 50, 82);
 sprite_change_offset("fspecial_grab", 50, 82);
 sprite_change_offset("uspecial", 56, 74);
 sprite_change_offset("dspecial", 100, 132);
-sprite_change_offset("taunt", 0, 0);
+sprite_change_offset("taunt", 20, 31);
 
 sprite_change_offset("plat", 0, 0);
 
@@ -70,3 +70,5 @@ sprite_change_offset("dspecial_target_lv4", 27, 27);
 sprite_change_offset("dspecial_target_lv5", 27, 27);
 // uspecial bombomb
 sprite_change_offset("uspecial_bobomb", 15, 24);
+// taunt confetties
+sprite_change_offset("taunt_confetties", 102, 100);

@@ -144,3 +144,13 @@ targetSprite[1] = sprite_get("dspecial_target_lv2");
 targetSprite[2] = sprite_get("dspecial_target_lv3");
 targetSprite[3] = sprite_get("dspecial_target_lv4");
 targetSprite[4] = sprite_get("dspecial_target_lv5");
+
+// taunt variables
+tauntAngle = 0;
+confettiesHfx = hit_fx_create(sprite_get("taunt_confetties"), 75);
+// sprite
+tauntSprite = sprite_get("taunt");
+tauntSfx1 = sound_get("taunt1");
+tauntSfx2 = sound_get("taunt2");
+tauntSfx3 = sound_get("taunt3");
+tauntSfx4 = sound_get("taunt4");
