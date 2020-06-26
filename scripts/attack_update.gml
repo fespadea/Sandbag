@@ -191,11 +191,27 @@ switch(attack){
         break;
     case AT_USPECIAL:
         hsp /= 1.5;
-        if(window == 3){
-            var selfHurtHitbox = create_hitbox(attack, 2, round(x), round(y));
-            selfHurtHitbox.can_hit_self = true;
-            spawn_hit_fx(round(x + selfHurtHitbox.x_pos), round(y + selfHurtHitbox.y_pos), get_hitbox_value(attack, 1, HG_VISUAL_EFFECT));
-            sound_play(get_hitbox_value(attack, 1, HG_HIT_SFX));
+        can_fast_fall = false;
+        var bombDoesNotExist = true;
+        with pHurtBox {
+            if(orig_player == other.player){
+                bombDoesNotExist = true;
+            }
+        }
+        if(bombDoesNotExist){
+            if(free){
+                if(was_parried){
+                    set_state(PS_PRATFALL);
+                } else {
+                    set_state(PS_IDLE_AIR);
+                }
+            } else {
+                if(was_parried){
+                    set_state(PS_PRATLAND);
+                } else {
+                    set_state(PS_IDLE);
+                }
+            }
         }
         break;
     case AT_DSPECIAL:

@@ -75,11 +75,6 @@ switch (state){
                     hurtboxID.sprite_index = sandgrabGrabSprite[1];
                 }
                 break;
-            case AT_USPECIAL:
-                if(image_index > 3 && image_index < 10){
-                    hud_offset = 80;
-                }
-                break;
         }
         break;
 }

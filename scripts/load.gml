@@ -53,17 +53,20 @@ sprite_change_offset("nspecial_land", 100, 132);
 sprite_change_offset("nspecial_up", 100, 132);
 sprite_change_offset("fspecial_fly", 50, 82);
 sprite_change_offset("fspecial_grab", 50, 82);
-sprite_change_offset("uspecial", 100, 132);
-sprite_change_offset("uspecial_proj", 100, 132);
-sprite_change_collision_mask("uspecial_proj", true, 0, 0, 0, 0, 0, 0);
+sprite_change_offset("uspecial", 56, 74);
 sprite_change_offset("dspecial", 100, 132);
 sprite_change_offset("taunt", 0, 0);
 
 sprite_change_offset("plat", 0, 0);
 
+set_victory_theme(sound_get("victory"));
+
 // proj
+// targets
 sprite_change_offset("dspecial_target_lv1", 27, 27);
 sprite_change_offset("dspecial_target_lv2", 27, 27);
 sprite_change_offset("dspecial_target_lv3", 27, 27);
 sprite_change_offset("dspecial_target_lv4", 27, 27);
 sprite_change_offset("dspecial_target_lv5", 27, 27);
+// uspecial bombomb
+sprite_change_offset("uspecial_bobomb", 15, 24);

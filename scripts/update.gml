@@ -23,7 +23,7 @@ switch(state){ // dash stuff
 }
 
 // reset used sanddash variable
-if(!free || state_cat == SC_HITSTUN){
+if(!free){
     sanddashed = false;
 } else if(sanddashed){
     move_cooldown[AT_NSPECIAL_AIR] = 2;
