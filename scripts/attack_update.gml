@@ -117,6 +117,7 @@ switch(attack){
             }
         } else if(window == 2){
             can_wall_jump = true;
+            can_shield = true;
             if(window_timer == 1){
                 with pHitBox {
                     if(orig_player == other.player && attack == AT_FSPECIAL && hbox_num == 1){
