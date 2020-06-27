@@ -41,13 +41,6 @@ switch(attack){
         } else if(window == 2){
             can_attack = true;
             can_wall_jump = true;
-            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
-                set_state(PS_IDLE_AIR);
-            } else if(!sanddropped && down_hard_pressed){
-                sanddropped = true;
-                preSanddropVsp = vsp + get_window_value(attack, window, AG_WINDOW_CUSTOM_GRAVITY);
-                vsp = 30;
-            }
             if(sanddropped){
                 if(preSanddropVsp != 0){
                     vsp = preSanddropVsp;
@@ -62,6 +55,13 @@ switch(attack){
                         set_state(PS_DASH);
                     }
                 }
+            }
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                set_state(PS_IDLE_AIR);
+            } else if(!sanddropped && down_hard_pressed){
+                sanddropped = true;
+                preSanddropVsp = vsp + get_window_value(attack, window, AG_WINDOW_CUSTOM_GRAVITY);
+                vsp = 30;
             }
         } else if(window == 3){
             can_attack = true;
