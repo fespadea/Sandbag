@@ -234,7 +234,7 @@ switch(attack){
             if(!special_down){
                 letGoOfDspecialCharge = true;
             }
-            if(((special_pressed || is_special_pressed(DIR_ANY)) && letGoOfDspecialCharge) || killTarget){ // press special again to drop target
+            if(((state_timer < 6 || special_pressed || is_special_pressed(DIR_ANY)) && letGoOfDspecialCharge) || killTarget){ // press special again to drop target
                 window = 6;
                 window_timer = 0;
             }
