@@ -26,7 +26,7 @@ free = true;
 hit_wall = false;
 
 //Cope with own mortality
-should_die = false;
+shouldDie = false;
 
 //windows
 window = 1;

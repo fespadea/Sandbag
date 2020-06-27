@@ -18,6 +18,8 @@ switch(attack){
     case AT_DSPECIAL:
         window = dspecialChargeWindow;
         initialDspecialChargeWindow = window;
+        killTarget = false;
+        letGoOfDspecialCharge = false;
         break;
     case AT_TAUNT:
         tauntAngle = 0;
