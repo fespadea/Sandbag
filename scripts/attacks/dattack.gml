@@ -24,6 +24,7 @@ set_window_value(AT_DATTACK, 3, AG_WINDOW_CUSTOM_GROUND_FRICTION, ground_frictio
 set_window_value(AT_DATTACK, 4, AG_WINDOW_LENGTH, 15);
 set_window_value(AT_DATTACK, 4, AG_WINDOW_ANIM_FRAMES, 5);
 set_window_value(AT_DATTACK, 4, AG_WINDOW_ANIM_FRAME_START, 9);
+set_window_value(AT_DATTACK, 4, AG_WINDOW_HAS_WHIFFLAG, 1);
 
 set_num_hitboxes(AT_DATTACK, 2);
 

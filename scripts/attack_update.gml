@@ -257,4 +257,11 @@ switch(attack){
     case AT_TAUNT:
         tauntAngle -= ((get_window_value(attack, window, AG_WINDOW_LENGTH) - window_timer) / 4.95) * spr_dir;
         break;
+    case AT_JAB:
+        if(window == get_attack_value(attack, AG_NUM_WINDOWS)){
+            if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
+                set_state(PS_IDLE);
+            }
+        }
+        break;
 }

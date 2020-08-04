@@ -8,6 +8,13 @@ switch(state){
         }
         break;
     case 1:
+        switch(targetLv){
+            case 1:
+                for(var i = 0; i < 8; i++){
+                    
+                }
+                break;
+        }
         shouldDie = true;
         break;
 }

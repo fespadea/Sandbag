@@ -40,6 +40,7 @@ set_window_value(AT_USTRONG, 6, AG_WINDOW_ANIM_FRAME_START, 17);
 set_window_value(AT_USTRONG, 7, AG_WINDOW_LENGTH, 18);
 set_window_value(AT_USTRONG, 7, AG_WINDOW_ANIM_FRAMES, 6);
 set_window_value(AT_USTRONG, 7, AG_WINDOW_ANIM_FRAME_START, 20);
+set_window_value(AT_USTRONG, 7, AG_WINDOW_HAS_WHIFFLAG, 1);
 
 set_num_hitboxes(AT_USTRONG, 2);
 

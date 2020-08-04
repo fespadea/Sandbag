@@ -63,11 +63,16 @@ set_victory_theme(sound_get("victory"));
 
 // proj
 // targets
-sprite_change_offset("dspecial_target_lv1", 27, 27);
-sprite_change_offset("dspecial_target_lv2", 27, 27);
-sprite_change_offset("dspecial_target_lv3", 27, 27);
-sprite_change_offset("dspecial_target_lv4", 27, 27);
-sprite_change_offset("dspecial_target_lv5", 27, 27);
+sprite_change_offset("dspecial_target_lv1", sprite_get_width(sprite_get("dspecial_target_lv1"))/2, sprite_get_height(sprite_get("dspecial_target_lv1"))/2);
+sprite_change_offset("dspecial_target_lv2", sprite_get_width(sprite_get("dspecial_target_lv2"))/2, sprite_get_height(sprite_get("dspecial_target_lv2"))/2);
+sprite_change_offset("dspecial_target_lv3", sprite_get_width(sprite_get("dspecial_target_lv3"))/2, sprite_get_height(sprite_get("dspecial_target_lv3"))/2);
+sprite_change_offset("dspecial_target_lv4", sprite_get_width(sprite_get("dspecial_target_lv4"))/2, sprite_get_height(sprite_get("dspecial_target_lv4"))/2);
+sprite_change_offset("dspecial_target_lv5", sprite_get_width(sprite_get("dspecial_target_lv5"))/2, sprite_get_height(sprite_get("dspecial_target_lv5"))/2);
+sprite_change_offset("dspecial_target_lv1_piece", sprite_get_width(sprite_get("dspecial_target_lv1_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv1_piece"))/2);
+sprite_change_offset("dspecial_target_lv2_piece", sprite_get_width(sprite_get("dspecial_target_lv2_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv2_piece"))/2);
+sprite_change_offset("dspecial_target_lv3_piece", sprite_get_width(sprite_get("dspecial_target_lv3_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv3_piece"))/2);
+sprite_change_offset("dspecial_target_lv4_piece", sprite_get_width(sprite_get("dspecial_target_lv4_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv4_piece"))/2);
+sprite_change_offset("dspecial_target_lv5_piece", sprite_get_width(sprite_get("dspecial_target_lv5_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv5_piece"))/2);
 // uspecial bombomb
 sprite_change_offset("uspecial_bobomb", 15, 24);
 // taunt confetties
