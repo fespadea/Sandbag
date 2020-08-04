@@ -146,9 +146,12 @@ targetSprite[1] = sprite_get("dspecial_target_lv2");
 targetSprite[2] = sprite_get("dspecial_target_lv3");
 targetSprite[3] = sprite_get("dspecial_target_lv4");
 targetSprite[4] = sprite_get("dspecial_target_lv5");
-targetPieceSprite[0] = sprite_get("dspecial_target_lv1_piece");
-targetPieceSprite[1] = sprite_get("dspecial_target_lv2_piece");
-targetPieceSprite[2] = sprite_get("dspecial_target_lv3_piece");
+targetPieceSprite[0, 0] = sprite_get("dspecial_target_lv1_piece");
+targetPieceSprite[0, 1] = sprite_get("dspecial_target_lv1_piece_top");
+targetPieceSprite[1, 0] = sprite_get("dspecial_target_lv2_piece");
+targetPieceSprite[1, 1] = sprite_get("dspecial_target_lv2_piece_top");
+targetPieceSprite[2, 0] = sprite_get("dspecial_target_lv3_piece");
+targetPieceSprite[2, 1] = sprite_get("dspecial_target_lv3_piece_top");
 targetPieceSprite[3] = sprite_get("dspecial_target_lv4_piece");
 targetPieceSprite[4] = sprite_get("dspecial_target_lv5_piece");
 // sounds

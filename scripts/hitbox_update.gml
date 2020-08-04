@@ -17,4 +17,27 @@ if(attack == AT_USPECIAL){
             destroyed = true;
         }
     }
+} else if(attack == AT_EXTRA_1){
+    if(hbox_num == 3){
+        hsp += hspIcrement;
+        vsp += vspIcrement;
+        if(hitbox_timer == ceil(length/2)+1){
+            with player_id {
+                attack_end(other.attack);
+            }
+            for(var i = 0; i < array_length(can_hit); i++){
+                can_hit[i] = 1;
+            }
+        } else if(hitbox_timer == length - 1){
+            sound_effect = asset_get("sfx_blow_medium3");
+            extra_hitpause = 20;
+            hit_flipper = 0;
+            with player_id {
+                attack_end(other.attack);
+            }
+            for(var i = 0; i < array_length(can_hit); i++){
+                can_hit[i] = 1;
+            }
+        }
+    }
 }
