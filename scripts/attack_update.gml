@@ -39,6 +39,7 @@ switch(attack){
                 }
             }
         } else if(window == 2){
+            moveTarget();
             can_attack = true;
             can_wall_jump = true;
             if(sanddropped){
@@ -96,6 +97,7 @@ switch(attack){
                 }
             }
         } else if(window == 2){
+            moveTarget();
             can_attack = true;
             can_wall_jump = true;
             if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)){
@@ -128,7 +130,14 @@ switch(attack){
                     }
                 }
             }
-            if(!free){
+            if(instance_exists(targetArticle)){
+                with sandgrabGrabHitbox {
+                    if(place_meeting(x, y, other.targetArticle)){
+                        other.grabbedTarget = true;
+                    }
+                }
+            }
+            if(!free || grabbedTarget){
                 window = 4;
                 window_timer = 0;
                 sandgrabGrabHitbox.length = 0;
@@ -169,6 +178,11 @@ switch(attack){
                 grabbedidFspecial.y = y + vsp + grabbedidFspecial.char_height/2;
                 grabbedidFspecial.wrap_time = 6000;
                 grabbedidFspecial.state = PS_WRAPPED;
+            } else if(grabbedTarget && instance_exists(targetArticle)){
+                x = targetArticle.x;
+                y = targetArticle.y;
+                hsp = 0;
+                vsp = 0;
             }
         } else if(window == 5){
             if(instance_exists(grabbedidFspecial)){
@@ -189,6 +203,21 @@ switch(attack){
                 }
                 grabbedidFspecial.wrap_time = 6000;
                 grabbedidFspecial.state = PS_WRAPPED;
+            } else if(grabbedTarget && instance_exists(targetArticle)){
+                switch(image_index){
+                    case 2:
+                        targetArticle.x = x + hsp + lerp(0, -26*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        targetArticle.y = y + vsp + lerp(0, -14, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        break;
+                    case 3:
+                        targetArticle.x = x + hsp + lerp(-26*spr_dir, -31*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        targetArticle.y = y + vsp + lerp(-14, -33, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)*2/3));
+                        break;
+                    case 4:
+                        targetArticle.x = x + hsp + lerp(-31*spr_dir, -19*spr_dir, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)/3));
+                        targetArticle.y = y + vsp + lerp(-33, -61, window_timer/(get_window_value(attack, window, AG_WINDOW_LENGTH)));
+                        break;
+                }
             }
         }
         break;
@@ -264,4 +293,29 @@ switch(attack){
             }
         }
         break;
+}
+
+
+#define moveTarget()
+if(instance_exists(targetArticle)){
+    if(right_down){
+        targetArticle.hsp = 2;
+        targetArticle.vsp = 0;
+        movedTarget = true;
+    } else if(left_down){
+        targetArticle.hsp = -2;
+        targetArticle.vsp = 0;
+        movedTarget = true;
+    } else if(up_down){
+        targetArticle.hsp = 0;
+        targetArticle.vsp = -2;
+        movedTarget = true;
+    } else if(down_down){
+        targetArticle.hsp = 0;
+        targetArticle.vsp = 2;
+        movedTarget = true;
+    } else if(!movedTarget){
+        targetArticle.hsp = 0;
+        targetArticle.vsp = 0;
+    }
 }

@@ -112,6 +112,7 @@ continueDash = false;
 sanddashed = false;
 sanddropped = false;
 preSanddropVsp = 0;
+movedTarget = false;
 // land sound
 sanddashLandSound = asset_get("sfx_land_heavy");
 // sanddash sprites
@@ -128,11 +129,15 @@ sanddashLandingLagSprite[1] = sprite_get("nspecial_land_hurt");
 sandgrabInitialHeight = 0;
 sandgrabGrabbed = false;
 sandgrabGrabHitbox = noone;
+grabbedTarget = false;
 //grab template
 grabbedidFspecial = noone;
 // sandgrab sprite
 sandgrabGrabSprite[0] = sprite_get("fspecial_grab");
 sandgrabGrabSprite[1] = sprite_get("fspecial_grab_hurt");
+
+//bomb variables
+bombNotActivated = true;
 
 // break the targets variables
 targetArticle = noone;
@@ -152,11 +157,15 @@ targetPieceSprite[1, 0] = sprite_get("dspecial_target_lv2_piece");
 targetPieceSprite[1, 1] = sprite_get("dspecial_target_lv2_piece_top");
 targetPieceSprite[2, 0] = sprite_get("dspecial_target_lv3_piece");
 targetPieceSprite[2, 1] = sprite_get("dspecial_target_lv3_piece_top");
-targetPieceSprite[3] = sprite_get("dspecial_target_lv4_piece");
-targetPieceSprite[4] = sprite_get("dspecial_target_lv5_piece");
+targetPieceSprite[3, 0] = sprite_get("dspecial_target_lv4_piece");
+targetPieceSprite[3, 1] = sprite_get("dspecial_target_lv4_piece_top");
+targetPieceSprite[4, 0] = sprite_get("dspecial_target_lv5_piece");
+targetPieceSprite[4, 1] = sprite_get("dspecial_target_lv5_piece_top");
 // sounds
 targetPlaceSound = sound_get("targetDrop");
 targetBreakSound = sound_get("targetBreak");
+targetParryUseSound = asset_get("sfx_parry_use");
+targetParrySuccessSound = asset_get("sfx_parry_success");
 
 // taunt variables
 tauntAngle = 0;

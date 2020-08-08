@@ -19,6 +19,7 @@ if(my_hitboxID.attack == AT_FSPECIAL){
 // bomb hitbox on uspecial
 if(my_hitboxID.attack == AT_USPECIAL){
     if(my_hitboxID.hbox_num == 1){
+        bombNotActivated = false;
         sound_play(my_hitboxID.sound_effect);
         if(hit_player_obj == id){
             create_hitbox(my_hitboxID.attack, 3, round(my_hitboxID.x), round(my_hitboxID.y)).can_hit_self = true;

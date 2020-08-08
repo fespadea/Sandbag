@@ -41,7 +41,7 @@ set_hitbox_value(AT_USPECIAL, 1, HG_VISUAL_EFFECT, 141);
 set_hitbox_value(AT_USPECIAL, 1, HG_HIT_SFX, asset_get("sfx_abyss_explosion"));
 set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_SPRITE, sprite_get("uspecial_bobomb"));
 set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_MASK, -1);
-set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_VSPEED, -8);
+set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_VSPEED, -7);
 set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_GRAVITY, .5);
 set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_GROUND_BEHAVIOR, 1);
 set_hitbox_value(AT_USPECIAL, 1, HG_PROJECTILE_WALL_BEHAVIOR, 1);

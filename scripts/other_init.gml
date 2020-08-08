@@ -1,0 +1,3 @@
+// other init
+
+parriedByTarget = false;

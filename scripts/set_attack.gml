@@ -2,6 +2,7 @@
 
 switch(attack){
     case AT_NSPECIAL:
+        movedTarget = false;
         if(free){
             attack = AT_NSPECIAL_AIR;
             sanddropped = false;
@@ -10,6 +11,7 @@ switch(attack){
         break;
     case AT_FSPECIAL:
         sandgrabGrabbed = false;
+        grabbedTarget = false;
         reset_hitbox_value(AT_FSPECIAL, 2, HG_ANGLE);
         break;
     case AT_DATTACK:
@@ -41,5 +43,8 @@ switch(attack){
             default:
                 sound_play(tauntSfx1);
         }
+        break;
+    case AT_USPECIAL:
+        bombNotActivated = true;
         break;
 }

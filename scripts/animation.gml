@@ -78,3 +78,23 @@ switch (state){
         }
         break;
 }
+
+
+with oPlayer {
+    if(id != other && "parriedByTarget" in self && parriedByTarget && parry_id == other.id){
+        if(state == PS_ATTACK_GROUND && state == PS_ATTACK_AIR){
+            if(window == get_attack_value(attack, AG_NUM_WINDOWS)){
+                if(window_timer == get_window_value(attack, window, AG_WINDOW_LENGTH)-1){
+                    if(free){
+                        set_state(PS_PRATFALL);
+                    } else{
+                        set_state(PS_PRATLAND);
+                    }
+                    parriedByTarget = false;
+                }
+            }
+        } else {
+            parriedByTarget = false;
+        }
+    }
+}

@@ -75,7 +75,9 @@ sprite_change_offset("dspecial_target_lv2_piece_top", sprite_get_width(sprite_ge
 sprite_change_offset("dspecial_target_lv3_piece", sprite_get_width(sprite_get("dspecial_target_lv3_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv3_piece"))/2);
 sprite_change_offset("dspecial_target_lv3_piece_top", sprite_get_width(sprite_get("dspecial_target_lv3_piece_top"))/2, sprite_get_height(sprite_get("dspecial_target_lv3_piece_top"))/2);
 sprite_change_offset("dspecial_target_lv4_piece", sprite_get_width(sprite_get("dspecial_target_lv4_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv4_piece"))/2);
+sprite_change_offset("dspecial_target_lv4_piece_top", sprite_get_width(sprite_get("dspecial_target_lv4_piece_top"))/2, sprite_get_height(sprite_get("dspecial_target_lv4_piece_top"))/2);
 sprite_change_offset("dspecial_target_lv5_piece", sprite_get_width(sprite_get("dspecial_target_lv5_piece"))/2, sprite_get_height(sprite_get("dspecial_target_lv5_piece"))/2);
+sprite_change_offset("dspecial_target_lv5_piece_top", sprite_get_width(sprite_get("dspecial_target_lv5_piece_top"))/2, sprite_get_height(sprite_get("dspecial_target_lv5_piece_top"))/2);
 // uspecial bombomb
 sprite_change_offset("uspecial_bobomb", 15, 24);
 // taunt confetties

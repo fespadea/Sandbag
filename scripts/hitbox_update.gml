@@ -39,5 +39,21 @@ if(attack == AT_USPECIAL){
                 can_hit[i] = 1;
             }
         }
+    } else if(hbox_num == 4){
+        dieOnGround();
+        dieOutOfBounds();
+    } else if(hbox_num == 5){
+        dieOnGround();
+        dieOutOfBounds();
     }
+}
+
+#define dieOnGround()
+if(!free){
+    destroyed = true;
+}
+
+#define dieOutOfBounds()
+if(x < 0 || x > room_width || y < 0 || y > room_height){
+    destroyed = true;
 }
